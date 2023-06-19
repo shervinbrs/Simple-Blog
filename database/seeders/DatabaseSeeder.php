@@ -27,6 +27,7 @@ class DatabaseSeeder extends Seeder
          Widget::create([
              'name'=>'درباره من',
              'slug'=>'درباره-من',
+             'meta_desc'=>'درباره من',
              'icon'=>'bx bx-info-square',
              'content'=>'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores ducimus et, soluta illo vero fugiat maiores sequi cum voluptatibus aperiam sed eos exercitationem voluptates commodi nesciunt, reiciendis totam provident possimus.'
          ]);

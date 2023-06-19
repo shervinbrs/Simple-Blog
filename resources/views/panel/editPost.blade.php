@@ -52,6 +52,12 @@
                         </select>
                     </div>
                 </div>
+                <div class="d75 center">
+                    <div class="input d100">
+                        <span>توضیحات متا : </span>
+                        <input type="text" name="meta_desc" placeholder="ترجیحا بین 100 تا 160 کلمه" maxlength="200" value="{{$post['meta_desc']}}">
+                    </div>
+                </div>
                     <div class="d75 center">
                         <input type="text" id="content" value="{{$post['content']}}" hidden>
                         <textarea class="texter" name="content" id="editor1" value="testtt">

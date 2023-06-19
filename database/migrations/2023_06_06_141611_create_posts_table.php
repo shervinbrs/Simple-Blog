@@ -19,9 +19,10 @@ class CreatePostsTable extends Migration
             $table->string('slug',50)->unique(); 
             $table->foreignId('user_id')->on('users');
             $table->foreignId('category_id')->on('categories');
-            $table->string('thumbnail',30)->default('default.png'); 
+            $table->string('thumbnail',30)->default('default.png');
             $table->date('publish_date');
             $table->boolean('publish')->default(false);
+            $table->string('meta_desc',200);
             $table->longText('content');
             $table->timestamps();
         });

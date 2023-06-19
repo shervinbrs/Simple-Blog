@@ -27,6 +27,12 @@
                         <span>آیکون :</span>
                         <input id="slug" name="icon" type="text" placeholder="آیکون(boxicons)" value="{{$widget['icon']}}">
                     </div>
+                    <div class="d75 center">
+                        <div class="input d100">
+                            <span>توضیحات متا : </span>
+                            <input type="text" name="meta_desc" placeholder="ترجیحا بین 100 تا 160 کلمه" maxlength="200" value="{{$widget['meta_desc']}}">
+                        </div>
+                    </div>
                 </div>
                     <div class="d75 center">
                         <input type="text" id="content" value="{{$widget['content']}}" hidden>

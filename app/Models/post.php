@@ -9,7 +9,8 @@ use Illuminate\Database\Eloquent\Model;
 class post extends Model
 {
     use HasFactory;
-    protected $fillable = ['title','slug','user_id','thumbnail','publish','publish_date','content','category_id'];
+    protected $fillable = ['title','slug','user_id','thumbnail','publish','publish_date','content','category_id','meta_desc'];
+    protected $hidden = ['created_at'];
 
     public function category()
     {

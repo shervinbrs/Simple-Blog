@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="{{URL::asset('/css')}}/style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" type="image/x-icon" href="{{URL::asset('/storage')}}/favicon.ico">
+    <link rel="canonical" href="{{URL::asset('/')}}"/>
+    @yield('header')
 </head>
 <body>
     <div class="mobile-menu">

@@ -20,6 +20,7 @@ class CreateWidgetsTable extends Migration
             $table->string('icon',30);
             $table->boolean('active')->default(true);
             $table->longText('content');
+            $table->string('meta_desc',200);
             $table->timestamps();
         });
     }

@@ -32,9 +32,9 @@ class Post_Cont extends Controller
             'publish_date'=>'required',
             'content'=>'required|string',
             'category_id'=>'required|integer',
-            'thumbnail'=>'file|mimes:jpeg,png,jpg,gif|max:2048'
+            'thumbnail'=>'file|mimes:jpeg,png,jpg,gif|max:2048',
+            'meta_desc'=>'required|string|max:200'
         ]);
-        // $post_information['user_id'] = Auth::user()['id'];
         if(!empty($req->thumbnail))
         {
             if($post->thumbnail != 'default.png')
@@ -68,6 +68,7 @@ class Post_Cont extends Controller
             'content'=>'required|string',
             'category_id'=>'required|integer',
             'thumbnail'=>'file|mimes:jpeg,png,jpg,gif|max:2048',
+            'meta_desc'=>'required|string|max:200'
         ]);
         if(!empty($req->thumbnail))
         {

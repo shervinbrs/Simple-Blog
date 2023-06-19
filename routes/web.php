@@ -20,12 +20,13 @@ use App\Http\Controllers\Panel\Dashboard;
 Route::get('/',function()
 {
     return view('home');
-});
+})->name('home');
 
 Route::get('/post/{post:slug}',[Blog_Post::class,'showPost']);
 Route::get('/contact',[Blog_Widget::class,'showContact']);
 Route::post('/contact',[Blog_Widget::class,'saveMessage'])->name('contact');
 Route::get('/w/{widget:slug}',[Widget_Cont::class,'showWidget']);
+Route::get('/sitemap.xml',[Blog_Post::class,'showSiteMap']);
 
 Route::get('/admin',[Dashboard::class,'index'])->middleware(['auth'])->name('dashboard');
 

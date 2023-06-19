@@ -23,11 +23,11 @@
     <div class="contact-inputs">
     <form method="POST">
         <span>نام شما : </span>
-        <input type="text" name="name" placeholder="نام شما">
+        <input type="text" name="name" placeholder="نام شما" required maxlength="30">
         <span>ایمیل شما : </span>
-        <input type="email" name="email" placeholder="پست الکترونیک">
+        <input type="email" name="email" placeholder="پست الکترونیک" required maxlength="100">
         <span>پیام شما : </span>
-        <textarea name="message" id="" cols="30" rows="10" placeholder="پیام شما"></textarea>
+        <textarea name="message" id="" cols="30" rows="10" placeholder="پیام شما" required maxlength="1000"></textarea>
         @csrf
         <input type="submit" class="button button-success" value="ارسال">
     </form>

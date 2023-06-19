@@ -16,6 +16,7 @@ class Widget_Cont extends Controller
     }
     public function showWidget(Widget $widget)
     {
+        if($widget['active'] == 0 ) return abort('404');
         return view('widget')->with([
             'widget'=>$widget
         ]);
@@ -31,7 +32,8 @@ class Widget_Cont extends Controller
             'name'=>'required|string|max:30',
             'slug'=>'required|string|max:30|unique:widgets,slug',
             'icon'=>'required|string|max:30',
-            'content'=>'required|string'
+            'content'=>'required|string',
+            'meta_desc'=>'required|string|max:200'
         ]);
         if(!empty($req->publish))
         {
@@ -52,7 +54,8 @@ class Widget_Cont extends Controller
             'name'=>'required|string|max:30',
             'slug'=>'required|string|max:30|unique:widgets,slug,'.$widget->id,
             'icon'=>'required|string|max:30',
-            'content'=>'required|string'
+            'content'=>'required|string',
+            'meta_desc'=>'required|string|max:200'
         ]);
         if(!empty($req->publish))
         {
